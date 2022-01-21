@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='utf-8'?>
+<scheme version="2.0" title="" description="">
+	<nodes>
+		<node id="0" name="Paint Data" qualified_name="Orange.widgets.data.owpaintdata.OWPaintData" project_name="Orange3" version="" title="Paint Data" position="(300.0, 177.0)" />
+		<node id="1" name="SVM" qualified_name="Orange.widgets.model.owsvm.OWSVM" project_name="Orange3" version="" title="SVM" position="(204.0, 436.0)" />
+		<node id="2" name="Neural Network" qualified_name="Orange.widgets.model.owneuralnetwork.OWNNLearner" project_name="Orange3" version="" title="Neural Network" position="(187.0, 613.0)" />
+		<node id="3" name="Test and Score" qualified_name="Orange.widgets.evaluate.owtestandscore.OWTestAndScore" project_name="Orange3" version="" title="Test and Score" position="(472.0, 491.0)" />
+		<node id="4" name="Scatter Plot" qualified_name="Orange.widgets.visualize.owscatterplot.OWScatterPlot" project_name="Orange3" version="" title="Scatter Plot" position="(675.0, 530.0)" />
+		<node id="5" name="kNN" qualified_name="Orange.widgets.model.owknn.OWKNNLearner" project_name="Orange3" version="" title="kNN" position="(219.0, 343.0)" />
+		<node id="6" name="Random Forest" qualified_name="Orange.widgets.model.owrandomforest.OWRandomForest" project_name="Orange3" version="" title="Random Forest" position="(167.0, 525.0)" />
+		<node id="7" name="Data Table" qualified_name="Orange.widgets.data.owtable.OWDataTable" project_name="Orange3" version="" title="Data Table (1)" position="(1219.0, 521.0)" />
+		<node id="8" name="Data Table" qualified_name="Orange.widgets.data.owtable.OWDataTable" project_name="Orange3" version="" title="Data Table" position="(816.0, 585.0)" />
+		<node id="9" name="Save Data" qualified_name="Orange.widgets.data.owsave.OWSave" project_name="Orange3" version="" title="classification_compare_input.csv" position="(420.0, 108.0)" />
+		<node id="10" name="Save Data" qualified_name="Orange.widgets.data.owsave.OWSave" project_name="Orange3" version="" title="classification_compare_output.csv" position="(764.0, 296.0)" />
+	</nodes>
+	<links>
+		<link id="0" source_node_id="2" sink_node_id="3" source_channel="Learner" sink_channel="Learner" enabled="true" />
+		<link id="1" source_node_id="1" sink_node_id="3" source_channel="Learner" sink_channel="Learner" enabled="true" />
+		<link id="2" source_node_id="3" sink_node_id="4" source_channel="Predictions" sink_channel="Data" enabled="true" />
+		<link id="3" source_node_id="5" sink_node_id="3" source_channel="Learner" sink_channel="Learner" enabled="true" />
+		<link id="4" source_node_id="6" sink_node_id="3" source_channel="Learner" sink_channel="Learner" enabled="true" />
+		<link id="5" source_node_id="0" sink_node_id="3" source_channel="Data" sink_channel="Data" enabled="true" />
+		<link id="6" source_node_id="4" sink_node_id="8" source_channel="Selected Data" sink_channel="Data" enabled="true" />
+		<link id="7" source_node_id="0" sink_node_id="9" source_channel="Data" sink_channel="Data" enabled="true" />
+		<link id="8" source_node_id="3" sink_node_id="10" source_channel="Predictions" sink_channel="Data" enabled="true" />
+	</links>
+	<annotations />
+	<thumbnail />
+	<node_properties>
+		<properties node_id="0" format="literal">{'attr1': 'x', 'attr2': 'y', 'autocommit': True, 'brushRadius': 75, 'controlAreaVisible': True, 'data': [[0.14127775316993987, 0.9215467153897093, 0.0], [0.17937994696141193, 0.7486982965716151, 0.0], [0.2826112363078417, 0.8753904211246704, 0.0], [0.09147532479091858, 0.6687307218371144, 0.0], [0.11009104412798573, 0.49909166036768693, 0.0], [0.13947104136166427, 0.6521552460281071, 0.0], [0.19308853839870174, 0.629237559654872, 0.0], [0.2491602687743566, 0.6106806561383755, 0.0], [0.16397560941827372, 0.687526397914634, 0.0], [0.11533254586852475, 0.5920107148040287, 0.0], [0.19927644335193312, 0.640207138762201, 0.0], [0.12547964442281062, 0.5727920923792658, 0.0], [0.22555943192929834, 0.6075952941075325, 0.0], [0.4035886501257707, 0.8636532882534859, 0.0], [0.37580804154118697, 0.7311872038266749, 0.0], [0.34225750858165566, 0.32554468372169043, 1.0], [0.36354076239178196, 0.45890735042617603, 1.0], [0.31281777302563385, 0.305032533885259, 1.0], [0.3027135603528133, 0.43811501416756865, 1.0], [0.34991891623825966, 0.47589899304123723, 1.0], [0.3887289813033092, 0.4873377221794744, 1.0], [0.40992231986891087, 0.4838696827925764, 1.0], [0.38815571452578274, 0.4149422205901511, 1.0], [0.3883221359401945, 0.436783255511756, 1.0], [0.4566561698863538, 0.4985852929654999, 1.0], [0.4177723016676639, 0.48175896944247265, 1.0], [0.4644512817917257, 0.4573411711242099, 1.0], [0.39898585116408186, 0.4884792823293457, 1.0], [0.46097046974985884, 0.468967479445653, 1.0], [0.4118527110932195, 0.5352520847841874, 1.0], [0.43867071242439637, 0.5653472587914676, 1.0], [0.515037385714909, 0.5385715221521222, 1.0], [0.5492609983203818, 0.4815297340683911, 1.0], [0.532692769359051, 0.48217402163571876, 1.0], [0.5303804081797339, 0.5504685800183093, 1.0], [0.4748247042110435, 0.5797226028941527, 1.0], [0.4918916576128367, 0.6438565075521564, 1.0], [0.46253407956138776, 0.6680617908435875, 1.0], [0.5385540080020779, 0.7249576342262564, 1.0], [0.5233959384365866, 0.7097498630270482, 1.0], [0.47561579733221604, 0.7126690256852972, 1.0], [0.48172581793375424, 0.8190794196642425, 1.0], [0.6038155597553669, 0.7400498285763302, 1.0], [0.5597067587522575, 0.8371266738915027, 1.0], [0.549881678084135, 0.794671186693291, 1.0], [0.49617875714973986, 0.8149931774705717, 1.0], [0.5947490801977571, 0.8327380791982737, 1.0], [0.4953231769508729, 0.8113025316363228, 1.0], [0.5335166264339547, 0.8082522448752434, 1.0], [0.06010811393211046, 0.4735159699455942, 2.0], [0.0, 0.3738106949899685, 2.0], [0.05805411397808091, 0.42366988841159403, 2.0], [0.1067249399646871, 0.34655937559981076, 2.0], [0.10257802403428136, 0.38345394763587554, 2.0], [0.06465055084605567, 0.4338934746022091, 2.0], [0.06784840206283319, 0.35544721274821395, 2.0], [0.08420455832929395, 0.2845448363187557, 2.0], [0.10897261471716957, 0.3526411462568424, 2.0], [0.10535081513429617, 0.30459401461459434, 2.0], [0.15235945747864282, 0.30936099642152204, 2.0], [0.17457328682900047, 0.29155961115229556, 2.0], [0.20610844332307365, 0.3024980524776306, 2.0], [0.2112286601642735, 0.23191451087314807, 2.0], [0.2537104318021876, 0.11528020572194542, 2.0], [0.18381335493182255, 0.25333663968206943, 2.0], [0.2217645179465809, 0.22740322749816544, 2.0], [0.19655335160812412, 0.18861823158566698, 2.0], [0.22212698972446335, 0.2172121493647419, 2.0], [0.23914443431506063, 0.1991232798981182, 2.0], [0.23793025991836142, 0.18853526512130125, 2.0], [0.3190344535175314, 0.14643266078929046, 2.0], [0.3055490878155308, 0.19534101433227435, 2.0], [0.3180055221685521, 0.15318462229462962, 2.0], [0.36555428854946165, 0.14624472394706234, 2.0], [0.38860895834026066, 0.11819367346029033, 2.0], [0.3963144249975081, 0.17962073259114913, 2.0], [0.43728620984191474, 0.13726561424769912, 2.0], [0.5823029838234592, 0.09868762715076958, 2.0], [0.508760360788852, 0.1879696246124325, 2.0], [0.5395686423508165, 0.1703229369944982, 2.0], [0.5390657195610195, 0.17398171606580976, 2.0], [0.6358035409753894, 0.24228205877297282, 2.0], [0.5649535884850462, 0.2555530345597831, 2.0], [0.639468185982194, 0.33422369998925244, 2.0], [0.5940761174400675, 0.3053741930952088, 2.0], [0.7290859947162752, 0.3840596871669582, 2.0], [0.6098376283989937, 0.41270132355718164, 2.0], [0.6657913262328541, 0.3816560358734993, 2.0], [0.6988473970546413, 0.4685243798977121, 2.0], [0.7641349147878859, 0.5172114992939317, 2.0], [0.651499518838462, 0.5317469891196839, 2.0], [0.7196379745737566, 0.5644538797986408, 2.0], [0.69003150598112, 0.5045107459066467, 2.0], [0.7380309413924994, 0.6437551150159619, 2.0], [0.7290666175572383, 0.627705518540868, 2.0], [0.7259859027870021, 0.614598639895063, 2.0], [0.7245062494596523, 0.6214831227641088, 2.0], [0.7250039295944234, 0.5983609993364949, 2.0], [0.6935896243623043, 0.6773207331604784, 2.0], [0.6511198185399073, 0.7331916701164289, 2.0], [0.7253286822453104, 0.7160097859261945, 2.0], [0.7539446356577001, 0.6819930143613417, 2.0], [0.7715035989823338, 0.6816964310042942, 2.0], [0.7241651453941687, 0.7234625329400668, 2.0], [0.7845143932145067, 0.8132359251323924, 2.0], [0.6884382243746802, 0.697926925661812, 2.0], [0.7666735273851002, 0.7650263177838271, 2.0], [0.7952394039555719, 0.8157287372090812, 2.0], [0.7516675542103776, 0.7647049709675133, 2.0], [0.7508472829187662, 0.7943729212954248, 2.0], [0.7641311101154488, 0.7868700508372781, 2.0], [0.7338341714243015, 0.7950973185322558, 2.0], [0.8176119353135168, 0.7861608660187318, 2.0], [0.7338783722036557, 0.7539055013887477, 2.0], [0.7362480933441591, 0.7835121964545869, 2.0], [0.7919389362745781, 0.8166915639203816, 2.0], [0.6716576420125885, 0.967704661676179, 2.0], [0.6064659728931278, 1.0, 2.0], [0.6723457861900956, 0.9010404578777479, 2.0], [0.7966118562629422, 0.2736351268238314, 3.0], [0.857070518569057, 0.2569216684000868, 3.0], [0.8268804379652801, 0.3281696695715966, 3.0], [0.9276941179905698, 0.3190204785091004, 3.0], [0.8769567558529778, 0.27354895506579596, 3.0], [0.8413260799925549, 0.3317505132295619, 3.0], [0.8925933774913405, 0.27601685214070865, 3.0], [0.8558938181788717, 0.23924187508673014, 3.0], [0.7768502334175055, 0.24358481675930158, 3.0]], 'density': 7, 'hasAttr2': True, 'labels': ['C1', 'C2', 'C3', 'C4'], 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x02"\x00\x00\x00\xd4\x00\x00\x06L\x00\x00\x03\xa8\x00\x00\x02(\x00\x00\x00\xf1\x00\x00\x06F\x00\x00\x03\xa2\x00\x00\x00\x00\x00\x00\x00\x00\x06\xfa', 'symbol_size': 10, 'table_name': 'Painted data', '__version__': 1}</properties>
+		<properties node_id="1" format="literal">{'C': 1.0, 'auto_apply': True, 'coef0': 0.0, 'controlAreaVisible': True, 'degree': 6.0, 'epsilon': 0.1, 'gamma': 0.0, 'kernel_type': 2, 'learner_name': '', 'limit_iter': True, 'max_iter': 100, 'nu': 0.5, 'nu_C': 1.0, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x01\xfb\x00\x00\x00a\x00\x00\x03 \x00\x00\x02e\x00\x00\x02\x01\x00\x00\x00~\x00\x00\x03\x1a\x00\x00\x02_\x00\x00\x00\x00\x00\x00\x00\x00\x06\xfa', 'svm_type': 0, 'tol': 0.001, '__version__': 1}</properties>
+		<properties node_id="2" format="literal">{'activation_index': 3, 'alpha_index': 0, 'auto_apply': True, 'controlAreaVisible': True, 'hidden_layers_input': '100,100,100', 'learner_name': 'Neural Network', 'max_iterations': 200, 'replicable': True, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x03\x83\x00\x00\x02H\x00\x00\x04\xb2\x00\x00\x03\x9f\x00\x00\x03\x89\x00\x00\x02e\x00\x00\x04\xac\x00\x00\x03\x99\x00\x00\x00\x00\x00\x00\x00\x00\x06\xfa', 'solver_index': 2, '__version__': 1}</properties>
+		<properties node_id="3" format="pickle">gASVfwIAAAAAAAB9lCiMFGNvbXBhcmlzb25fY3JpdGVyaW9ulEsAjBJjb250cm9sQXJlYVZpc2li
+bGWUiIwNY3Zfc3RyYXRpZmllZJSIjAduX2ZvbGRzlEsDjAluX3JlcGVhdHOUSwOMCnJlc2FtcGxp
+bmeUSwKMBHJvcGWURz+5mZmZmZmajAtzYW1wbGVfc2l6ZZRLCYwTc2F2ZWRXaWRnZXRHZW9tZXRy
+eZRDMgHZ0MsAAgAAAAAB8QAAARwAAAUIAAACxAAAAfcAAAE5AAAFAgAAAr4AAAAAAAAAAAb6lIwS
+c2h1ZmZsZV9zdHJhdGlmaWVklIiMCHVzZV9yb3BllImMC3Njb3JlX3RhYmxllH2UjAxzaG93bl9z
+Y29yZXOUj5QojANNQUWUjAlQcmVjaXNpb26UjANNU0WUjANBVUOUjARSTVNFlIwCRjGUjAJSMpSM
+AkNBlIwGUmVjYWxslJBzjAtfX3ZlcnNpb25fX5RLA4wQY29udGV4dF9zZXR0aW5nc5RdlIwVb3Jh
+bmdld2lkZ2V0LnNldHRpbmdzlIwHQ29udGV4dJSTlCmBlH2UKIwEdGltZZRHQdhnMoBH+kOMBnZh
+bHVlc5R9lCiMD2NsYXNzX3NlbGVjdGlvbpSMFihBdmVyYWdlIG92ZXIgY2xhc3NlcymUSv////+G
+lIwMZm9sZF9mZWF0dXJllE5K/v///4aUjBVmb2xkX2ZlYXR1cmVfc2VsZWN0ZWSUiUr+////hpRo
+DX2UaBpLA3WMCmF0dHJpYnV0ZXOUjAF4lEsChpSMAXmUSwKGlIaUjAVtZXRhc5QpjApjbGFzc192
+YXJzlIwFQ2xhc3OUSwGGlIWUdWJhdS4=
+</properties>
+		<properties node_id="4" format="pickle">gASVqwYAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMC2F1dG9fc2FtcGxllIiMEmNvbnRyb2xBcmVh
+VmlzaWJsZZSIjBNzYXZlZFdpZGdldEdlb21ldHJ5lENCAdnQywADAAAAAAGvAAAA5QAABQoAAAOA
+AAABsAAAAQIAAAUJAAADfwAAAAAAAAAABwAAAAGwAAABAgAABQkAAAN/lIwJc2VsZWN0aW9ulE6M
+EXRvb2x0aXBfc2hvd3NfYWxslIiMD3Zpc3VhbF9zZXR0aW5nc5R9lIwFZ3JhcGiUfZQojAthbHBo
+YV92YWx1ZZRLPYwNY2xhc3NfZGVuc2l0eZSIjBFqaXR0ZXJfY29udGludW91c5SIjAtqaXR0ZXJf
+c2l6ZZRLAIwTbGFiZWxfb25seV9zZWxlY3RlZJSIjBZvcnRob25vcm1hbF9yZWdyZXNzaW9ulImM
+C3BvaW50X3dpZHRolEsGjAlzaG93X2dyaWSUiYwLc2hvd19sZWdlbmSUiIwNc2hvd19yZWdfbGlu
+ZZSJdYwLX192ZXJzaW9uX1+USwWMEGNvbnRleHRfc2V0dGluZ3OUXZQojBVvcmFuZ2V3aWRnZXQu
+c2V0dGluZ3OUjAdDb250ZXh0lJOUKYGUfZQojAR0aW1llEdB2Gcyn/eN94wGdmFsdWVzlH2UKIwK
+YXR0cl9jb2xvcpSMBUNsYXNzlEtlhpSMCmF0dHJfbGFiZWyUTkr+////hpSMCmF0dHJfc2hhcGWU
+jA1SYW5kb20gRm9yZXN0lEtlhpSMCWF0dHJfc2l6ZZROSv7///+GlIwGYXR0cl94lIwBeJRLZoaU
+jAZhdHRyX3mUjAF5lEtmhpRoCn2UaBZLBXWMCmF0dHJpYnV0ZXOUfZQoaCxLAmgvSwKMBUNsYXNz
+lEsBdYwFbWV0YXOUfZQojA5OZXVyYWwgTmV0d29ya5RLAYwDU1ZNlEsBjANrTk6USwGMDVJhbmRv
+bSBGb3Jlc3SUSwGME05ldXJhbCBOZXR3b3JrIChDMSmUSwKME05ldXJhbCBOZXR3b3JrIChDMimU
+SwKME05ldXJhbCBOZXR3b3JrIChDMymUSwKME05ldXJhbCBOZXR3b3JrIChDNCmUSwKMCFNWTSAo
+QzEplEsCjAhTVk0gKEMyKZRLAowIU1ZNIChDMymUSwKMCFNWTSAoQzQplEsCjAhrTk4gKEMxKZRL
+AowIa05OIChDMimUSwKMCGtOTiAoQzMplEsCjAhrTk4gKEM0KZRLAowSUmFuZG9tIEZvcmVzdCAo
+QzEplEsCjBJSYW5kb20gRm9yZXN0IChDMimUSwKMElJhbmRvbSBGb3Jlc3QgKEMzKZRLAowSUmFu
+ZG9tIEZvcmVzdCAoQzQplEsCjARGb2xklEsBdXViaBspgZR9lChoHkdB2Gcx7WmpMGgffZQojAph
+dHRyX2NvbG9ylGg0S2WGlIwKYXR0cl9sYWJlbJROSv7///+GlIwKYXR0cl9zaGFwZZRoOUtlhpSM
+CWF0dHJfc2l6ZZROSv7///+GlIwGYXR0cl94lGgsS2aGlIwGYXR0cl95lGgvS2aGlIwFZ3JhcGiU
+fZRoFksFdWgyfZQoaCxLAmgvSwJoNEsBdWg1fZQoaDdLAWg4SwFoOUsBjBNOZXVyYWwgTmV0d29y
+ayAoQzEplEsCjBNOZXVyYWwgTmV0d29yayAoQzIplEsCjBNOZXVyYWwgTmV0d29yayAoQzMplEsC
+jBNOZXVyYWwgTmV0d29yayAoQzQplEsCjAhTVk0gKEMxKZRLAowIU1ZNIChDMimUSwKMCFNWTSAo
+QzMplEsCjAhTVk0gKEM0KZRLAowIa05OIChDMSmUSwKMCGtOTiAoQzIplEsCjAhrTk4gKEMzKZRL
+AowIa05OIChDNCmUSwJoS0sBdXViaBspgZR9lChoHkdB2Gcw3BJWWmgffZQoaE9oOEtlhpRoUWg0
+S2WGlGhTaDdLZYaUaFVOSv7///+GlGhXaCxLZoaUaFloL0tmhpRoW32UaBZLBXVoMn2UKGgsSwJo
+L0sCaDRLAXVoNX2UKGg3SwFoOEsBjBNOZXVyYWwgTmV0d29yayAoQzEplEsCjBNOZXVyYWwgTmV0
+d29yayAoQzIplEsCjBNOZXVyYWwgTmV0d29yayAoQzMplEsCjBNOZXVyYWwgTmV0d29yayAoQzQp
+lEsCjAhTVk0gKEMxKZRLAowIU1ZNIChDMimUSwKMCFNWTSAoQzMplEsCjAhTVk0gKEM0KZRLAmhL
+SwF1dWJldS4=
+</properties>
+		<properties node_id="5" format="literal">{'auto_apply': True, 'controlAreaVisible': True, 'learner_name': 'kNN', 'metric_index': 0, 'n_neighbors': 5, 'savedWidgetGeometry': None, 'weight_index': 0, '__version__': 1}</properties>
+		<properties node_id="6" format="literal">{'auto_apply': True, 'class_weight': False, 'controlAreaVisible': True, 'index_output': 0, 'learner_name': '', 'max_depth': 3, 'max_features': 5, 'min_samples_split': 5, 'n_estimators': 10, 'savedWidgetGeometry': None, 'use_max_depth': False, 'use_max_features': False, 'use_min_samples_split': True, 'use_random_state': False, '__version__': 1}</properties>
+		<properties node_id="7" format="literal">{'auto_commit': True, 'color_by_class': True, 'controlAreaVisible': True, 'dist_color_RGB': (220, 220, 220, 255), 'savedWidgetGeometry': None, 'select_rows': True, 'selected_cols': None, 'selected_rows': None, 'show_attribute_labels': True, 'show_distributions': False, '__version__': 2}</properties>
+		<properties node_id="8" format="literal">{'auto_commit': True, 'color_by_class': True, 'controlAreaVisible': True, 'dist_color_RGB': (220, 220, 220, 255), 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x03\x99\x00\x00\x00\\\x00\x00\x06\xc4\x00\x00\x02r\x00\x00\x03\x9f\x00\x00\x00y\x00\x00\x06\xbe\x00\x00\x02l\x00\x00\x00\x00\x00\x00\x00\x00\x06\xfa', 'select_rows': True, 'selected_cols': [], 'selected_rows': [], 'show_attribute_labels': True, 'show_distributions': False, '__version__': 2}</properties>
+		<properties node_id="9" format="literal">{'add_type_annotations': True, 'auto_save': True, 'controlAreaVisible': True, 'filter': 'Comma-separated values (*.csv)', 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x04\x06\x00\x00\x01b\x00\x00\x05C\x00\x00\x01\xff\x00\x00\x04\x07\x00\x00\x01\x7f\x00\x00\x05B\x00\x00\x01\xfe\x00\x00\x00\x00\x00\x00\x00\x00\x07\x00\x00\x00\x04\x07\x00\x00\x01\x7f\x00\x00\x05B\x00\x00\x01\xfe', 'stored_name': 'classification_compare_input.csv', 'stored_path': '//vmware-host/Shared Folders/OneDrive.osX/Work.kevat2022/opetus/TekoalynOhjelmointi/slides/src/orange', '__version__': 2}</properties>
+		<properties node_id="10" format="literal">{'add_type_annotations': True, 'auto_save': True, 'controlAreaVisible': True, 'filter': 'Comma-separated values (*.csv)', 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x03\x89\x00\x00\x01\xc2\x00\x00\x04\xcd\x00\x00\x02_\x00\x00\x03\x8a\x00\x00\x01\xdf\x00\x00\x04\xcc\x00\x00\x02^\x00\x00\x00\x00\x00\x00\x00\x00\x07\x00\x00\x00\x03\x8a\x00\x00\x01\xdf\x00\x00\x04\xcc\x00\x00\x02^', 'stored_name': 'classification_compare_results.csv', 'stored_path': '//vmware-host/Shared Folders/OneDrive.osX/Work.kevat2022/opetus/TekoalynOhjelmointi/slides/src/orange', '__version__': 2}</properties>
+	</node_properties>
+	<session_state>
+		<window_groups />
+	</session_state>
+</scheme>
