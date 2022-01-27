@@ -19,7 +19,7 @@ x=np.array([-1,4])
 y=np.array([-4, 1])
 
 A=np.array([[0.5, 1],
-            [-1, 3]])
+            [-1, 2]])
 
 fig=plt.figure(figsize=(8,8))
 
@@ -28,6 +28,7 @@ fig=plt.figure(figsize=(8,8))
 plotVector(O, x, 'r')
 Ax=A@x
 plotVector(O, Ax, 'm')
+
 
 plotVector(O, y, 'b')
 Ay=A@y
@@ -40,7 +41,6 @@ for phi in phi_array:
     z=np.array([np.cos(phi),np.sin(phi)])
     Az=A@z
     plotVector(z, Az, 'k')
-
 
 """
 #Create unit vector
@@ -96,8 +96,8 @@ plotVector(O, Py, 'c')
 plotLine(Py, x, 'k--')
 """
 
-plt.xlim([-6, 6])
-plt.ylim([-6, 6])
+plt.xlim([-7, 7])
+plt.ylim([-7, 7])
 
 plt.show()
 
