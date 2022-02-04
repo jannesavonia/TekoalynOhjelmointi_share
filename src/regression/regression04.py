@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn import linear_model
+from sklearn.metrics import r2_score
 from sklearn.preprocessing import PolynomialFeatures
 
 N_meas=31
@@ -9,6 +10,8 @@ N_meas=31
 c_real=-0.3
 b_real=0.7
 a_real=11.2
+
+modeldegree=2
 
 #generate measurement data
 data_x=np.linspace(-10, 10, N_meas)
@@ -26,31 +29,44 @@ linregr.fit(data_x, data_y)
 
 y_estimate = linregr.predict(data_x)
 
+print(32*'-')
+print('Linear model')
+print()
 print('linear b_estimate =', linregr.coef_[0,0])
 print('linear a_estimate =', linregr.intercept_[0])
+print()
+print('r^2               =', r2_score(data_y, y_estimate))
 print()
 
 ##############################
 #create polynomial regression model
 
 #create X matrix (convert to linear form)
-poly_reg=PolynomialFeatures(degree=2)
+poly_reg=PolynomialFeatures(degree=modeldegree)
 X_poly=poly_reg.fit_transform(data_x)
-print('X_poly =', X_poly[1:10, :])
+#print('X_poly =', X_poly[1:10, :])
 
 #fit data to linear model
 linreg2=linear_model.LinearRegression()
 linreg2.fit(X_poly,data_y)
 
+y_estimate2=linreg2.predict(poly_reg.fit_transform(data_x))
+
+print(32*'-')
+print('Polynomial model, degree =', modeldegree)
+print()
 print('polyn c_estimate  =', linreg2.coef_[0,2])
 print('polyn b_estimate  =', linreg2.coef_[0,1])
 print('polyn a_estimate  =', linreg2.intercept_[0])
+print()
+print('r^2               =', r2_score(data_y, y_estimate2))
+print()
+print(32*'-')
 print()
 print('c_real            =', c_real)
 print('b_real            =', b_real)
 print('a_real            =', a_real)
 
-y_estimate2=linreg2.predict(poly_reg.fit_transform(data_x))
 
 fig=plt.figure(figsize=(16, 8))
 plt.plot(data_x, data_y, '*')
