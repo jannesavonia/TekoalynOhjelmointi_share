@@ -13,7 +13,7 @@ train_fraction = 0.8
 Y_column='Weightlbs'
 
 #Load data
-data=pandas.read_csv(filename)
+data=pandas.read_csv(filename, encoding = "ISO-8859-1")
 print("Read data shape = "+str(data.shape))
 print()
 
@@ -59,7 +59,7 @@ plt.semilogy()
 plt.show()
 
 #PCA with reduced dimension, try values 1, 2, 5, 10
-for packed_dimension in [1, 5, 50]:
+for packed_dimension in [1, 2, 5, 50]:
     print(30*"-")
     print("Compute reduced dimension PCA, n =", packed_dimension)
     

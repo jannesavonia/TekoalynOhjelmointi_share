@@ -23,7 +23,7 @@ dx=-1
 dy=1
 plt.arrow(0, b, dx, dy, head_width=0.1)
 plt.arrow(0, b, dy, -dx, head_width=0.1)
-plt.savefig('pca01_01.png', bbox_inches='tight',pad_inches = 0)
+#plt.savefig('pca01_01.png', bbox_inches='tight',pad_inches = 0)
 plt.show()
 
 pca = PCA(2)
@@ -35,7 +35,7 @@ fig=plt.figure()
 plt.plot(pca_x[:, 0], pca_x[:, 1], '.')
 plt.xlim([-8, 8])
 plt.ylim([-0.2, 0.2])
-plt.savefig('pca01_02.png', bbox_inches='tight',pad_inches = 0)
+#plt.savefig('pca01_02.png', bbox_inches='tight',pad_inches = 0)
 plt.show()
 
 
@@ -49,7 +49,7 @@ plt.plot(pca_x[:, 0], pca_x[:, 1], '.')
 plt.plot(pca_x_reduced[:, 0], pca_x_reduced[:, 1], '.')
 plt.xlim([-8, 8])
 plt.ylim([-0.2, 0.2])
-plt.savefig('pca01_03.png', bbox_inches='tight',pad_inches = 0)
+#plt.savefig('pca01_03.png', bbox_inches='tight',pad_inches = 0)
 plt.show()
 
 
@@ -62,5 +62,5 @@ plt.ylim([-5+b, 5+b])
 #dy=1
 #plt.arrow(0, b, dx, dy, head_width=0.1)
 #plt.arrow(0, b, dy, -dx, head_width=0.1)
-plt.savefig('pca01_04.png', bbox_inches='tight',pad_inches = 0)
+#plt.savefig('pca01_04.png', bbox_inches='tight',pad_inches = 0)
 plt.show()
