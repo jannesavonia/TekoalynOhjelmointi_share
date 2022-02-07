@@ -74,3 +74,4 @@ plt.plot(data_x, y_estimate, ':')
 plt.plot(data_x, y_estimate2,color='blue')
 plt.savefig("regression04.png")
 plt.show()
+
