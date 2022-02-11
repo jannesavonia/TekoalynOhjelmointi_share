@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.utils import shuffle
 from sklearn.model_selection import train_test_split
-from sklearn import svm
+from sklearn.neighbors import KNeighborsClassifier
 
 #http://mreed.umtri.umich.edu/mreed/downloads.html
 #Male dataset!
@@ -69,7 +69,9 @@ columns=trainX.columns
 trainX=trainX.to_numpy()
 testX=testX.to_numpy()
 
-classifier = svm.SVC()
+n_neighbours=3
+
+classifier = KNeighborsClassifier(n_neighbors=n_neighbours)
 classifier.fit(trainX, trainY)
 
 predY=classifier.predict(testX)
