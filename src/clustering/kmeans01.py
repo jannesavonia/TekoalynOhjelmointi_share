@@ -23,7 +23,5 @@ kmeans=KMeans(n_clusters=3).fit(data)
 kmeans_classID=kmeans.labels_
 
 plt.scatter(x=data['x'], y=data['y'], c=kmeans_classID)
-
-#Optimimäärä ks. https://www.analyticsvidhya.com/blog/2021/05/k-mean-getting-the-optimal-number-of-clusters/
-
+plt.show()
 

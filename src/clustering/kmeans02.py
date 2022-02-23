@@ -4,14 +4,12 @@ import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
 from sklearn.metrics import silhouette_score
 
-#https://www.analyticsvidhya.com/blog/2021/05/k-mean-getting-the-optimal-number-of-clusters/
-
-
 filename='../orange/clustering01.csv'
 
 #Load data
 data=pandas.read_csv(filename, skiprows=[1, 2])
 print("Read data shape = "+str(data.shape))
+print()
 
 classID=data["Class"]
 
@@ -37,6 +35,5 @@ plt.show()
 
 max_idx=silhouette_avg.index(max(silhouette_avg))
 print("Recommended number of clusters is", n_clusters_array[max_idx])
-
 
 
