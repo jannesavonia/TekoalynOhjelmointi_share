@@ -86,13 +86,12 @@ model = Sequential()
 model.add(Dense(128, activation='relu', input_shape=(width_train,)))
 model.add(Dense(128, activation='relu'))
 model.add(Dense(128, activation='relu'))
-model.add(Dense(1, activation='linear'))
+model.add(Dense(1, activation='sigmoid'))
 
 model.summary()
-model.compile(loss='mse', optimizer='adam')
-model.fit(trainX, trainY, epochs=20)
+model.compile(loss='binary_crossentropy', metrics=['accuracy'])
+model.fit(trainX, trainY, epochs=10)
 
 predY=model.predict(testX)
-predY=np.round(predY) #convert to 0/1 value
-
-print("Faulty predictions:", np.abs(np.abs(testY)-np.abs(predY)).sum())
+predY=np.round(predY)
+print("Faulty pred:", (testY != predY).sum())

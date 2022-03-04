@@ -78,4 +78,4 @@ predY_int=np.round(predY) #convert to 0/1 value
 #convert to values
 predY_int=predY_int.argmax(1)
 
-print("Faulty predictions:", np.abs(testY-predY_int).sum())
+print("Faulty pred:", (testY != predY_int).sum())
